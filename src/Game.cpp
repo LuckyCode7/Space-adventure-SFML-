@@ -1,4 +1,4 @@
-#include "Game.h"
+#include <../inc/Game.h>
 #include "Define.h"
 #include <ctime>
 #include <iostream>
@@ -172,7 +172,7 @@ void Game::checkBulletMeteoriteCollision(std::vector<Bullet*>& b, const std::uni
             {
                 if ((*bullet)->getIsExtra())
                 {
-                    MySound* sound = new MySound("sounds/extracrash2.wav", abs(100 - (*meteorite)->getPosition().x));
+                    MySound* sound = new MySound("../sounds/extracrash2.wav", abs(100 - (*meteorite)->getPosition().x));
                     this->sounds.emplace_back(sound);
                     sound->play();
                     this->points += (*meteorite)->getSpeed() + 10;
@@ -184,7 +184,7 @@ void Game::checkBulletMeteoriteCollision(std::vector<Bullet*>& b, const std::uni
                 }
                 else
                 {
-                    MySound* sound = new MySound("sounds/crash.wav", abs(100 - (*meteorite)->getPosition().x));
+                    MySound* sound = new MySound("../sounds/crash.wav", abs(100 - (*meteorite)->getPosition().x));
                     this->sounds.emplace_back(sound);
                     sound->play();
                     player->setNumberofBullets(1);
@@ -216,7 +216,7 @@ void Game::checkPlayerMeteoriteCollision(const std::unique_ptr<Player>& player)
             if ((*meteorite)->getGlobalBounds().intersects(player->getGlobalBounds()) &&
                 ((*meteorite)->getGlobalBounds().contains(player->getPosition().x - ((point->x) / 2), player->getPosition().y - ((point->y) / 2))))
             {
-                MySound* sound = new MySound("sounds/extracrash.wav", 50);
+                MySound* sound = new MySound("../sounds/extracrash.wav", 50);
                 this->sounds.emplace_back(sound);
                 sound->play();
                 delete *meteorite;
@@ -255,7 +255,7 @@ void Game::updateExtraHealth(const std::unique_ptr<Player>& player)
         }
         if (player->getGlobalBounds().intersects((*hp)->getGlobalBounds()))
         {
-            MySound* sound = new MySound("sounds/extrahp.wav", 50);
+            MySound* sound = new MySound("../sounds/extrahp.wav", 50);
             this->sounds.emplace_back(sound);
             sound->play();
             player->setHp(20);
