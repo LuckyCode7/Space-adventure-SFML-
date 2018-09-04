@@ -1,5 +1,5 @@
 #include <../inc/Game.h>
-#include "Define.h"
+#include <..inc/Define.h>
 #include <ctime>
 #include <iostream>
 #include <fstream>
