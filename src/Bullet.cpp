@@ -8,7 +8,7 @@ Bullet::Bullet(const int& XPOS, const int& YPOS, bool extra) :
     if (extra)
     {
         this->extraBullet.setSize(sf::Vector2f(40, 19));
-        this->extraBullet_tx.loadFromFile("images/extra.png");
+        this->extraBullet_tx.loadFromFile("../images/extra.png");
         this->extraBullet.setTexture(&extraBullet_tx);
         this->extraBullet.setPosition(XPOS, YPOS + 30);
     }
