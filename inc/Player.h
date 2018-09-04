@@ -2,7 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <sstream>
 #include <vector>
-#include "Bullet.h"
+#include <../inc/Bullet.h>
 
 class Game;
 class MySound;
