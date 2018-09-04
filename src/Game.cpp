@@ -24,7 +24,7 @@ Game::Game(const sf::String& title) :
     this->setMouseCursorVisible(false);
 
     this->setBackground();
-    this->setTextProperties("fonts/OpenSans-Light.ttf");
+    this->setTextProperties("../fonts/OpenSans-Light.ttf");
 
     for (int i = 0; i < 1000; i++)
     {
