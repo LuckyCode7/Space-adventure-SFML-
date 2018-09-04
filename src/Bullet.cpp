@@ -1,4 +1,4 @@
-#include "Bullet.h"
+#include <../inc/Bullet.h>
 
 Bullet::Bullet(const int& XPOS, const int& YPOS, bool extra) :
     sf::CircleShape(),
