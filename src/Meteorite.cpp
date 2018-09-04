@@ -1,5 +1,5 @@
-#include "Meteorite.h"
-#include "Define.h"
+#include <../inc/Meteorite.h>
+#include <../inc/Define.h>
 
 Meteorite::Meteorite(const int & speed_, const int & vertices_) :
     speed(speed_),
