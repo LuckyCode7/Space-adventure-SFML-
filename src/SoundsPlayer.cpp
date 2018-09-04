@@ -1,6 +1,6 @@
-#include "SoundsPlayer.h"
+#include <../inc/SoundsPlayer.h>
 #include <SFML/Audio.hpp>
-#include "Define.h"
+#include <../inc/Define.h>
 
 MySound::MySound(const std::string& soundPath_, const int& volume_) :
     Sound(),
