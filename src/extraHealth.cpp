@@ -1,5 +1,5 @@
-#include "extraHealth.h"
-#include "Define.h"
+#include <../inc/extraHealth.h>
+#include <../inc/Define.h>
 
 ExtraHealth::ExtraHealth() :
     sf::RectangleShape(),
