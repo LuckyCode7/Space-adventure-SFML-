@@ -6,10 +6,10 @@
 #include <sstream>
 #include <memory>
 #include <string>
-#include "Player.h"
-#include "Meteorite.h"
-#include "extraHealth.h"
-#include "SoundsPlayer.h"
+#include <../inc/Player.h>
+#include <../inc/Meteorite.h>
+#include <../inc/extraHealth.h>
+#include <../inc/SoundsPlayer.h>
 
 class Bullet;
 class Player;
