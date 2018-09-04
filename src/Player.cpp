@@ -1,14 +1,14 @@
-#include "Player.h"
-#include "Define.h"
-#include "Game.h"
-#include "SoundsPlayer.h"
+#include <../inc/Player.h>
+#include <../inc/Define.h>
+#include <../inc/Game.h>
+#include <../inc/SoundsPlayer.h>
 
 std::vector<Bullet*> Player::fire;
 std::vector<sf::Vector2i> Player::pointsAroundShip;
 
 Player::Player() : Sprite()
 {
-    this->ship_img.loadFromFile("images/ship2.png");
+    this->ship_img.loadFromFile("../images/ship2.png");
     this->detectGreenPoints();
     this->ship_tx.loadFromImage(ship_img);
     this->setTexture(ship_tx);
@@ -100,7 +100,7 @@ void Player::setShipPosition()
     {
         if (this->leftShot.getElapsedTime().asSeconds() >= 0.16)
         {
-            MySound* sound = new MySound("sounds/shoot.wav", 40);
+            MySound* sound = new MySound("../sounds/shoot.wav", 40);
             Game::sounds.emplace_back(sound);
             sound->play();
             this->bullets--;
@@ -114,7 +114,7 @@ void Player::setShipPosition()
     {
         if (this->rightShot.getElapsedTime().asSeconds() >= 0.16)
         {
-            MySound* sound = new MySound("sounds/shoot.wav", 40);
+            MySound* sound = new MySound("../sounds/shoot.wav", 40);
             Game::sounds.emplace_back(sound);
             sound->play();
             this->bullets--;
@@ -128,7 +128,7 @@ void Player::setShipPosition()
     {
         if (this->extraShot.getElapsedTime().asSeconds() >= 5.0)
         {
-            MySound* sound = new MySound("sounds/shoot2.wav", 40);
+            MySound* sound = new MySound("../sounds/shoot2.wav", 40);
             Game::sounds.emplace_back(sound);
             sound->play();
             this->bullets -= 2;
@@ -152,7 +152,7 @@ void Player::setPower()
 
 void Player::setHealth()
 {
-    this->hp_tx.loadFromFile("images/hp4.png");
+    this->hp_tx.loadFromFile("../images/hp4.png");
     this->hpSign.setTexture(&hp_tx);
     this->hpSign.setSize(sf::Vector2f(30, 30));
     this->hpSign.setPosition(10, 10);
@@ -166,7 +166,7 @@ void Player::setHealth()
 
 void Player::setExtraBullet()
 {
-    this->extraBullet_tx.loadFromFile("images/bsign.png");
+    this->extraBullet_tx.loadFromFile("../images/bsign.png");
     this->extraBulletSign.setTexture(&extraBullet_tx);
     this->extraBulletSign.setSize(sf::Vector2f(19, 30));
     this->extraBulletSign.setPosition(hpSign.getPosition().x, SCREENY - 40);
