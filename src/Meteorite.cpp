@@ -27,10 +27,10 @@ void Meteorite::setMeteoriteTexture(const int& choice)
 {
     switch (choice)
     {
-    case 0: this->meteorite_tx.loadFromFile("images/texture/m1.png"); break;
-    case 1: this->meteorite_tx.loadFromFile("images/texture/m2.png"); break;
-    case 2: this->meteorite_tx.loadFromFile("images/texture/m3.png"); break;
-    case 3: this->meteorite_tx.loadFromFile("images/texture/m4.png"); break;
+    case 0: this->meteorite_tx.loadFromFile("../images/texture/m1.png"); break;
+    case 1: this->meteorite_tx.loadFromFile("../images/texture/m2.png"); break;
+    case 2: this->meteorite_tx.loadFromFile("../images/texture/m3.png"); break;
+    case 3: this->meteorite_tx.loadFromFile("../images/texture/m4.png"); break;
     }
 }
 
